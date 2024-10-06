@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabriola', serif;
+    background: #e0f7fa; /* Baby blue background */
+    color: #003366; /* Darker blue for contrast */
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: white; /* White header */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #003366; /* Darker blue for links */
+    transition: color 0.3s;
+    padding: 5px 15px;
+}
+
+nav a:hover {
+    color: #007bb5; /* Lighter blue on hover */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    padding: 50px 20px;
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.slide-up {
+    animation: slideUp 1s forwards;
+}
+
+.zoom-in {
+    animation: zoomIn 1s forwards;
+}
+
+.attraction-box {
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.attraction-box:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #007bb5; /* Blue border */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    background: #007bb5; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005f8c; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white; /* White footer */
+    color: #003366; /* Darker blue for footer text */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    section {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
